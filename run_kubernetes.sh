@@ -1,18 +1,12 @@
 #!/usr/bin/env bash
 
-# This tags and uploads an image to Docker Hub
+image=ml-microservice-k8s-app
+dockerpath=patrickcoutinho/$image
 
-# Step 1:
-# This is your Docker ID/path
-# dockerpath=<>
+kubectl run ml-microservice-k8s-app --image=$dockerpath --port=80 
 
-# Step 2
-# Run the Docker Hub container with kubernetes
+kubectl get pods
+sleep 40
+kubectl get pods
 
-
-# Step 3:
-# List kubernetes pods
-
-# Step 4:
-# Forward the container port to a host
-
+kubectl port-forward $image 8000:80
