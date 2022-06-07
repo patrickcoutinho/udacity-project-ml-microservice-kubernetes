@@ -4,7 +4,7 @@
 
 setup:
 	python3 -m venv /tmp/.devops
-	source ~/.devops/bin/activate
+	source /tmp/.devops/bin/activate
 
 install:
 	pip install --upgrade pip &&\
